@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Covid Vaccination Booking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="fonts/flaticon-covid/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    
+   
+    
+
+
+
+
+    <div class="hero-v1">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-6 text-center mx-auto">
+            <span class="d-block subheading"></span>
+            <h1 class="heading mb-3">Admin Page</h1>
+            <p class="mb-5">An ounce of prevention is worth a pound of cure. Let's take every precaution to prevent the spread of COVID-19.</p>
+
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="heading mb-3 text-center mx-auto">Add a Center</h1>
+            <form action="/addcenter" method="post">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="fname">Location Name<span style="color: red">*</span></label>
+                    <input type="text" name="name" class="form-control" required>
+                  </div>
+                </div>
+                </div>
+                <!-- <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="lname">Last name</label>
+                    <input type="text" id="lname" class="form-control">
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="pincode">Center Code<span style="color: red">*</span></label>
+                    <input type="text" name="code" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="password">Password<span style="color: red">*</span></label>
+                    <input type="password" name="password" class="form-control" required>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <p style="color: red;"><%=adminadd%></p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="submit" class="btn btn-primary text-center" value="Add">
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="col-lg-5 ml-auto">
+            <h1 class="heading mb-3 text-center mx-auto">Remove a Center</h1>
+            <form action="/removecenter" method="post">
+              
+          
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="name">Location Name<span style="color: red">*</span></label>
+                    <input type="text" name="name" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="code">Center Code<span style="color: red">*</span></label>
+                    <input type="text" name="code" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+
+            
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <p style="color: red;"><%=admindel%></p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="submit" class="btn btn-primary text-center" value="Remove">
+                </div>
+              </div>
+
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    </div>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+
+</body>
+</html>
